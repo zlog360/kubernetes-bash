@@ -1,5 +1,6 @@
 #!/bin/bash
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.4/aio/deploy/recommended.yaml &&
+kubectl proxy --address=192.168.0.125 --disable-filter=true &&
 cmd=$(cat <<EOF | kubectl apply -f -
 apiVersion: v1
 kind: ServiceAccount
