@@ -58,6 +58,8 @@ NAME           STATUS     ROLES    AGE   VERSION
 master-host    Ready     master   49m   v1.19.3
 worker-host    Ready     <none>   21m   v1.19.3
 ```
+# New User && Client Certificates
+[Client Certifcate Guide](https://medium.com/better-programming/k8s-tips-give-access-to-your-clusterwith-a-client-certificate-dfb3b71a76fe)
 #### TODOS
 1) High Availibility Cluster Setup
 2) multi-worker node setup from the admin node
