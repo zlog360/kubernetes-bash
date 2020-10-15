@@ -44,6 +44,7 @@ NAME        STATUS     ROLES    AGE     VERSION
 hostname    Ready      master   3m28s   v1.19.3
 ```
 # Worker Installation
+### Note: hostname must be unique in the cluster of nodes
 1) Execute run_install_worker with sudo priviliges in the worker machine
 2) Execute in master or Admin client node with sudo priviliges and copy the matching out put and run this in worker node
 ```bash
