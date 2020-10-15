@@ -1,6 +1,5 @@
 #!/bin/bash
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.4/aio/deploy/recommended.yaml &&
-kubectl proxy --address=192.168.0.125 --disable-filter=true &&
 cmd=$(cat <<EOF | kubectl apply -f -
 apiVersion: v1
 kind: ServiceAccount
@@ -27,3 +26,6 @@ EOF
 )
 #get token
 kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}')
+
+
+run this in uor servere where your admin kubectl is set kubectl proxy --address=192.168.0.125 --disable-filter=true &&
