@@ -45,9 +45,10 @@ hostname    Ready      master   3m28s   v1.19.3
 ```
 # Worker Installation
 1) Execute run_install_worker with sudo priviliges in the worker machine
-2) Execute in master or Admin client node with sudo priviliges
+2) Execute in master or Admin client node with sudo priviliges and copy the matching out put and run this in worker node
 ```bash
-$ kubeadm join 192.168.0.99:6443 --token cjywsx.vq652paxdanx7jgy     --discovery-token-ca-cert-hash sha256:7eeb60fff7d3c1f7e99bfd2fc3d3672b0aa5172904a2200607ee73a6c209de15
+$ kubeadm token create --print-join-command
+kubeadm join masterip:6443 --token somestring  --discovery-token-ca-cert-hash sha256:somestring
 ```
 3) execute in master or Admin node you should see the following 
 ```bash
