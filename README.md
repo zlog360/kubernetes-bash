@@ -58,6 +58,11 @@ NAME           STATUS     ROLES    AGE   VERSION
 master-host    Ready     master   49m   v1.19.3
 worker-host    Ready     <none>   21m   v1.19.3
 ```
+4) if worker node is in NotReady Status the do the following
+```bash
+systemctl daemon-reload
+systemctl restart kubelet
+```
 # New User && Client Certificates
 [Client Certifcate Guide](https://medium.com/better-programming/k8s-tips-give-access-to-your-clusterwith-a-client-certificate-dfb3b71a76fe)
 #### TODOS
