@@ -15,6 +15,12 @@ export MASTER_IP=your_ip
 export POD_NET_CIDR=ypur_pod_network
 export USER=username
 ```
+6) if All hostnames are same in every machine then  change host names in
+```bash
+$ sudo nano /etc/hostname
+$ sudo nano /etc/hosts
+$ sudo reboot
+```
 
 ## Instructions Master
 1) Execute run_install as the root user or with sudo priviliges
