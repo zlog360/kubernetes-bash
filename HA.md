@@ -1,6 +1,6 @@
 ### Load balancer should be working fine
 ```bash
-sudo kubeadm init --control-plane-endpoint "k8s.proxy.1:6443" --upload-certs --> on the first master.node
+sudo kubeadm init --control-plane-endpoint "k8s.proxy.1:6443" --upload-certs --pod-network-cidr=192.168.0.0/24 --> on the first master.node
 ```
 #### Note: update hostnames on all nodes
 ### Joining Master Nodes
