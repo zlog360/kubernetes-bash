@@ -5,7 +5,7 @@ sudo kubeadm init --control-plane-endpoint "k8s.proxy.1:6443" --upload-certs --p
 
 ### Network 
 ```bash
-sudo kubectl create -f https://docs.projectcalico.org/v3.14/manifests/calico.yaml
+kubectl create -f https://docs.projectcalico.org/v3.14/manifests/calico.yaml
 ```
 #### Note: update hostnames on all nodes
 ### Joining Master Nodes
