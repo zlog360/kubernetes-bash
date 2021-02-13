@@ -6,6 +6,11 @@ sudo kubeadm init --control-plane-endpoint "k8s.proxy.1:6443" --upload-certs --p
 ### Network 
 ```bash
 kubectl create -f https://docs.projectcalico.org/v3.14/manifests/calico.yaml
+# OR based on your choice or install flannel
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yaml
+# if flannel pods or calico pods stuck in failure to start or other pre run status execute 
+#below command replace name with the node and podcidr with your network 
+kubectl patch node [name] -p '{"spec":{"podCIDR":"[PodCidr]"}}'
 ```
 #### Note: update hostnames on all nodes
 #### Note: Add Hosts map to /etc/hosts in all nodes including loadbalalancer node example is below
