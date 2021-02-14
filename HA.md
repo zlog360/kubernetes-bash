@@ -5,6 +5,8 @@ sudo kubeadm init --control-plane-endpoint "k8s.proxy.1:6443" --upload-certs --p
 
 ### Network 
 ```bash
+#try https://docs.projectcalico.org/getting-started/kubernetes/quickstart
+## OR do below
 kubectl create -f https://docs.projectcalico.org/v3.14/manifests/calico.yaml
 # OR based on your choice or install flannel
 kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yaml
